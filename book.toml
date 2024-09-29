@@ -1,0 +1,6 @@
+[book]
+authors = ["kingdom"]
+language = "zh"
+multilingual = false
+src = "src"
+title = "AI技术栈解析及应用"
