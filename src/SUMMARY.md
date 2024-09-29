@@ -117,7 +117,6 @@
       - [框架模型层](./Chapter4/Chapter4.6/6框架模型层.md)
       - [对比和思考](./Chapter4/Chapter4.6/7对比和思考.md)
    - [ONNX (AMD)](./Chapter4/Chapter4.7/47-onnx-amd.md)
-      - [OpenXLA (AMD)](./Chapter4/Chapter4.7/46-openxla-amd.md)
       - [技术栈架构](./Chapter4/Chapter4.7/1技术栈架构.md)
       - [系统软件层](./Chapter4/Chapter4.7/2系统软件层.md)
       - [运行时环境层](./Chapter4/Chapter4.7/3运行时环境层.md)
