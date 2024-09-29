@@ -8,7 +8,7 @@
 
    - [AI技术栈的的意义](./Chapter2/22-ai-技术栈的的意义.md)
 
-   - [AI技术栈初步应用](./Chapter2/23-ai-技术栈初步应用.md)
+   - [AI技术栈初步应用](./Chapter2/23-ai-技术栈分层方法与应用.md)
 
 - [NVIDIA 平台](./Chapter3/3-nvidia-平台.md)
 
