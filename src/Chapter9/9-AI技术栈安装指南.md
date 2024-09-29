@@ -1,5 +1,5 @@
 # 附录——AI技术栈安装指南 
-### OpenCL ICD安装
+#### OpenCL ICD安装
 1. 检验驱动是否安装 （需要先安装驱动）
 nvidia-smi
 2. 更新软件包列表
@@ -17,7 +17,7 @@ ls /usr/include/CL
 
 
 
-### OpenCL Runtime 安装
+#### OpenCL Runtime 安装
 对于NVIDIA GPU，CUDA Toolkit中包含了OpenCL的支持。因此，安装CUDA Toolkit通常会自动安装OpenCL Runtime
 1. 检验驱动是否安装 （需要先安装驱动）
 nvidia-smi；
@@ -39,7 +39,7 @@ clinfo
 
 
 
-### OpenCL C/C++ 安装
+#### OpenCL C/C++ 安装
 1. 检验驱动是否安装 （需要先安装驱动）
 nvidia-smi；
 2. 更新软件包列表
@@ -59,7 +59,7 @@ sudo apt-get install ocl-icd-opencl-dev
 需要示例代码（C++）
 
 
-### Triton （paddle_benchmark环境）
+#### Triton （paddle_benchmark环境）
 Triton version: 3.0.0
 1. 更新系统
 sudo apt-get update
@@ -102,7 +102,7 @@ source ~/.bashrc
 7.安装 Python 依赖项
 pip install numpy
 pip install -e ${TVM_HOME}/python
-## 如果缺少.so可以运行如下代码进行解决
+### 如果缺少.so可以运行如下代码进行解决
 cd ${TVM_HOME}
 mkdir -p build
 cp cmake/config.cmake build
@@ -112,21 +112,21 @@ make -j$(nproc)
 8.验证安装
 import tvm
 print("TVM version:", tvm.__version__)
-## 如果出现发现缺少所需的 libstdc++.so.6 的 GLIBCXX_3.4.30 版本的情况可尝试运行如下代码
+### 如果出现发现缺少所需的 libstdc++.so.6 的 GLIBCXX_3.4.30 版本的情况可尝试运行如下代码
 ldd /home/aii-works/anaconda3/envs/paddle_benchmark/bin/python | grep libstdc++
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 
 
-## openaCC的安装
+### openaCC的安装
 1.下载 解压 安装NVIDIA HPC SDK
 
 网址：https://developer.nvidia.com/
 wget https://developer.download.nvidia.com/hpc-sdk/24.7/nvhpc_2024_247_Linux_x86_64_cuda_multi.tar.gztar xpzf nvhpc_2024_247_Linux_x86_64_cuda_multi.tar.gznvhpc_2024_247_Linux_x86_64_cuda_multi/install
-## 默认路径会安装到 /opt/nvidia/hpc_sdk
+### 默认路径会安装到 /opt/nvidia/hpc_sdk
 2.添加环境变量
 export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/<version>/compilers/bin:$PATH
 export LD_LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/<version>/compilers/lib:$LD_LIBRARY_PATH
-## 注意将<version>修改为安装的HPC SDK版本，本次安装版本为24.7
+### 注意将<version>修改为安装的HPC SDK版本，本次安装版本为24.7
 3.测试程序
 
 ```C++
@@ -196,7 +196,7 @@ int main() {
 pgcc -acc -Minfo=accel -o matrix_add matrix_add.c
 ./matrix_add
 
-## OpenCL安装
+### OpenCL安装
 1.添加 ROCm (Radeon Open Compute) Repository，ROCm 包含了 AMD GPU 驱动程序以及 OpenCL 支持；
 更新系统软件包：
 sudo apt update
@@ -227,7 +227,7 @@ clinfo
 5.安装必要的依赖库（可选）
 sudo apt install ocl-icd-libopencl1 opencl-headers clinfo
 
-## 安装Triton（本机安装）
+### 安装Triton（本机安装）
 在 Ubuntu 系统上为 AMD 显卡安装 Triton，通常涉及以下几个步骤。Triton 是一个高度优化的编译器，用于深度学习的矩阵乘法内核，主要针对 NVIDIA GPU，但你可以尝试使用它的部分功能或在特定情况下将其与 AMD GPU 配合使用。以下步骤将帮助你安装 Triton 和所需的依赖项。
 1.安装必要依赖
 sudo apt update
@@ -247,9 +247,9 @@ source ~/.bashrc
 
 3.安装 Triton
 pip install triton
-## 需要提前安装pip install pybind11==2.13.1
+### 需要提前安装pip install pybind11==2.13.1
 
-## 安装Apache TVM
+### 安装Apache TVM
 1.安装基本依赖
 sudo apt update
 sudo apt install -y git cmake build-essential libtinfo-dev zlib1g-dev \
@@ -260,13 +260,13 @@ sudo apt install -y llvm clang
 git clone --recursive https://github.com/apache/tvm tvm
 cd tvm
 4.安装ROCm（适用于AMD显卡）
-## 添加ROCm仓库
+### 添加ROCm仓库
 sudo apt update
 sudo apt install -y wget gnupg2
 wget -qO - http://repo.radeon.com/rocm/rocm.gpg.key | sudo apt-key add -
 echo 'deb [arch=amd64] http://repo.radeon.com/rocm/apt/5.5 ubuntu main' | sudo tee /etc/apt/sources.list.d/rocm.list
 
-## 安装ROCm
+### 安装ROCm
 sudo apt update
 sudo apt install -y rocm-dkms
 5.编译Apache TVM
@@ -285,7 +285,7 @@ sudo python3 setup.py install
 7.验证安装
 import tvm
 
-## Intel 驱动安装
+### Intel 驱动安装
 https://github.com/intel/intel-extension-for-tensorflow/issues/54
 
 1.为 OpenGL 和 Vulkan 配置开源 Mesa 3d 图形库
@@ -343,7 +343,7 @@ import sys
 
 import tensorflow as tf
 
-## Conv + ReLU activation + Bias
+### Conv + ReLU activation + Bias
 N = 1
 num_channel = 3
 input_width, input_height = (5, 5)
