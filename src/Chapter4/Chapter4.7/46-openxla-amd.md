@@ -1,1 +1,1 @@
-# OpenXLA (AMD)
+# Onnx (AMD)
