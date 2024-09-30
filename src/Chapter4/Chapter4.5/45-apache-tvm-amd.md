@@ -1,4 +1,4 @@
-# Apache TVM (AMD.md)
+# Apache TVM (AMD)
 TVM 支持的硬件概述
 下图显示了 TVM 当前支持的硬件后端：
 
