@@ -1,7 +1,4 @@
-https://aii-sdu.github.io/AI-Technology-Stack/
-我来帮你创建一个专业的README文件，包含项目信息、许可证和作者信息。
 
-```markdown
 # AI Technology Stack
 
 这是山东大学智能创新研究院（Academy of Intelligent Innovation）开发的AI技术栈文档，旨在提供全面的AI技术知识体系。
