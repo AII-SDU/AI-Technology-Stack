@@ -48,7 +48,7 @@ mdbook serve
 
 Copyright (c) 2024, 山东大学智能创新研究院（Academy of Intelligent Innovation）
 
-详细的许可证信息请查看 [LICENSE](LICENSE) 文件。
+详细的许可证信息请查看 [LICENSE]([LICENSE](https://github.com/AII-SDU/AI-Technology-Stack/blob/main/LICENSE.txt)) 文件。
 
 ## 贡献
 
@@ -58,5 +58,4 @@ Copyright (c) 2024, 山东大学智能创新研究院（Academy of Intelligent I
 
 - 机构：山东大学智能创新研究院（Academy of Intelligent Innovation）
 - 项目地址：[https://github.com/aii-sdu/AI-Technology-Stack](https://github.com/aii-sdu/AI-Technology-Stack)
-```
 
